@@ -1,14 +1,15 @@
 # NVIDIA Isaac Sim Development Workstation (Linux) with Chrome Remote Desktop:
 
-Use Chrome Remote Desktop to access the NVIDIA Isaac Sim Development Workstation (Linux), providing secure access to the graphical user interface.
+This document focus on using Chrome Remote Desktop to access the NVIDIA Isaac Sim Development Workstation (Linux) with G4 instance type from GCP Marketplace, providing secure access to the graphical user interface.
 
-Reference:
+### Reference:
+
+[https://blogs.nvidia.com/blog/nvidia-google-cloud-enterprise-ai-industrial-digitalization](https://blogs.nvidia.com/blog/nvidia-google-cloud-enterprise-ai-industrial-digitalization/)
 
 [https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine](https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine)
 
-[https://infotechys.com/chrome-remote-desktop-on-ubuntu-24-04/](https://infotechys.com/chrome-remote-desktop-on-ubuntu-24-04/) (external) 
 
-Discussion:
+### Discussion:
 
 Chrome remote desktop is NOT designed for heavy graphical applications. We see about 60 - 120 fps with NVIDIA Isaac Sim Desktop usage which is sufficient for normal usage. FPS can vary with network connection and other variables.  If user experience is not acceptable, we suggest using HP anywhere. [Link](https://cloud.google.com/compute/docs/virtual-workstation/linux) 
 
