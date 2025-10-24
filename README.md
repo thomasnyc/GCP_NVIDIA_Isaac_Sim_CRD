@@ -48,8 +48,16 @@ Chrome remote desktop is NOT designed for heavy graphical applications. We see a
 ## Install Chrome Remote Desktop on the VM instance
 
 
-
 1. In the SSH window for your VM instance, add the Linux Chrome Remote Desktop repository to your apt package list, and install the chrome-remote-desktop package.
+
+```
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+sudo dpkg -i chrome-remote-desktop_current_amd64.deb
+sudo apt-get install xfce4 xfce4-goodies
+sudo apt-get install -f -y
+sudo reboot
+```
+
 
 The system will reboot itself and ready for the next step: 
 
@@ -71,14 +79,12 @@ To start the remote desktop server, you need to have an authorization key for th
 6. Click **Authorize**. \
 You need to allow Chrome Remote Desktop to access your account. If you approve, the page displays a command line for Debian Linux that looks like the following:
 
-DISPLAY= /opt/google/chrome-remote-desktop/start-host \
-
+```
+    DISPLAY= /opt/google/chrome-remote-desktop/start-host \
     --code="4/xxxxxxxxxxxxxxxxxxxxxxxx" \
-
     --redirect-url="https://remotedesktop.google.com/_/oauthredirect" \
-
     --name=$(hostname)
-
+```
 
 
 7. You use this command to set up and start the Chrome Remote Desktop service on your VM instance, linking it with your Google Account using the authorization code. \
@@ -87,6 +93,11 @@ DISPLAY= /opt/google/chrome-remote-desktop/start-host \
 9. When you're prompted, enter a 6-digit PIN. This number will be used for additional authorization when you connect later. \
 You might see errors like No net_fetcher or Failed to read. You can ignore these errors.
 10. Verify that the service is running using the following command.
+
+```
+sudo systemctl status chrome-remote-desktop@$USER
+```
+
 11. If the service is running, you see output that includes the state active:
 
 chrome-remote-desktop.service - LSB: Chrome Remote Desktop service
@@ -129,13 +140,22 @@ Disable Black Screen Delay and Automatic Screen Lock like the pic shown below:  
 
 ![alt_text](images/image7.png "image_tooltip")
 
+If the session(s) locked up for whatever reason. Please run the following command to get all the sessions unlocked:
 
+```
+sudo loginctl unlock -sessions
+```
 
 ## Start the NVIDIA Issac Sim application
 
 
 
 1. To kick off the Issac Sim application, go to terminal and run :
+
+```
+cd IsaacSim
+./isaac-sim.sh
+```
 
 The Issac Sim Desktop is available: 
 
