@@ -52,11 +52,12 @@ Chrome remote desktop is NOT designed for heavy graphical applications. We see a
 1. In the SSH window for your VM instance, add the Linux Chrome Remote Desktop repository to your apt package list, and install the chrome-remote-desktop package.
 
 ```
+sudo apt-get update
+sudo apt-get install -y xvfb
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg -i chrome-remote-desktop_current_amd64.deb
-sudo apt-get install xfce4 xfce4-goodies
-sudo apt-get install -f -y
-sudo reboot
+sudo apt --fix-broken install -y
+sudo apt-get install -y xfce4 xfce4-goodies
 ```
 
 
