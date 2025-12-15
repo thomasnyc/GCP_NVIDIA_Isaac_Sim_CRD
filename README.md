@@ -189,7 +189,7 @@ Disable Black Screen Delay and Automatic Screen Lock like the pic shown below:  
 If the session(s) locked up for whatever reason. Please run the following command to get all the sessions unlocked:
 
 ```
-sudo loginctl unlock -sessions
+sudo loginctl unlock-sessions
 ```
 
 ## Start the NVIDIA Issac Sim application
