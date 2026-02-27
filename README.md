@@ -11,7 +11,7 @@ This document focus on using Chrome Remote Desktop to access the NVIDIA Isaac Si
 
 ### Discussion:
 
-Chrome remote desktop is NOT designed for heavy graphical applications. We see about 60 - 120 fps with NVIDIA Isaac Sim Desktop usage which is sufficient for normal usage. FPS can vary with network connection and other variables.  If user experience is not acceptable, we suggest using HP anywhere. [Link](https://cloud.google.com/compute/docs/virtual-workstation/linux) 
+Chrome remote desktop is NOT designed for heavy graphical applications. We see about 60 - 120 fps with NVIDIA Isaac Sim Desktop usage which is sufficient for normal usage. FPS can vary with network connection and other variables.  If user experience is not acceptable, we suggest using Thinlinc [link](https://github.com/thomasnyc/GCP_NVIDIA_Isaac_Sim_Thinlinc/tree/main) or HP anywhere. [Link](https://cloud.google.com/compute/docs/virtual-workstation/linux) 
 
 
 ## Setup a NVIDIA Isaac Sum Development Workstation (Linux)
